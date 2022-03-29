@@ -1,3 +1,4 @@
+package app;
 import java.io.IOException;
 
 import javax.servlet.annotation.WebServlet;
@@ -24,3 +25,4 @@ public class HelloAppEngine extends HttpServlet {
 }
 
 //toimipliiiis
+//onko privaatti?
