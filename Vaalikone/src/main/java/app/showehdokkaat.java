@@ -25,7 +25,7 @@ public class showehdokkaat extends HttpServlet {
 	// yritet‰‰n saada toimimaan k‰ytt‰m‰ll‰ opettajan antamaa fish tiedostoa
 	@Override
 	public void init() {
-		daor=new Daor("jdbc:mysql://localhost:3306/vaalikone", "root", "admin123");
+		daor=new Daor("jdbc:mysql://localhost:3306/vaalikone", "root", "root");
 	}
 
 
