@@ -49,7 +49,7 @@ table {
 			out.println("<input type='radio' name="+k.getId() +" value = '1'> 1");
 			out.println("<input type='radio' name="+k.getId() +" value = '2'> 2");
 			out.println("<input type='radio' name="+k.getId() +" value = '3'> 3");
-			out.println("<input type='radio' name="+k.getId()+" value = '4'> 4");
+			out.println("<input type='radio' name="+k.getId() +" value = '4'> 4");
 			out.println("<input type='radio' name="+k.getId() +" value = '5'> 5");
 			out.println("<br>");
 			
