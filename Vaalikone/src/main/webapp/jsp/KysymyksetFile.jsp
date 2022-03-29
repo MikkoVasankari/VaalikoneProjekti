@@ -19,6 +19,8 @@ table {
 }
 </style>
 
+
+
 <title>Vaalikone kysely</title>
 </head>
 <body>
