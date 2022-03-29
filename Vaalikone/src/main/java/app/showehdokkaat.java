@@ -38,15 +38,15 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	ArrayList<Ehdokas> list=null;
 	if (daor.getConnection()) {
 		// JATKA TÄSTÄ JOS EES HUOMAAT TÄN LOL
-		//list=daor.readEhdokas(); // Lassi: tässä ongelmia en tiedä miten päästä eteempäin
+		list=daor.readAllEhdokkaat(); // Lassi: tässä ongelmia en tiedä miten päästä eteempäin
 	}
 	else {
 		System.out.println("No connection to database");
 	}
 	request.setAttribute("ehdokkaat", list);
 	
-	//RequestDispatcher rd=request.getRequestDispatcher("/jsp/showfish.jsp");
-	//rd.forward(request, response);
+	RequestDispatcher rd=request.getRequestDispatcher("/jsp/showehdokas.jsp"); // lukee jsp tiedoston kansiosta
+	rd.forward(request, response);
 }
 }
 

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import data.Ehdokas;
 
+
 import java.sql.Connection;
 
 public class Daor {
@@ -41,19 +42,24 @@ public class Daor {
 			return false;
 		}
 	}
-	public Ehdokas readEhdokas(String id) {
-		Ehdokas f=null;
+	
+
+	public ArrayList<Ehdokas> readAllEhdokkaat() {
+		ArrayList<Ehdokas> list=new ArrayList<Ehdokas>();
 		try {
-			String sql="select * from ehdokkaat where id=?";
-			PreparedStatement pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1, id);
-			ResultSet RS=pstmt.executeQuery();
+			Statement stmt=conn.createStatement();
+			ResultSet RS=stmt.executeQuery("select * from ehdokkaat");
 			while (RS.next()){
-				f=new Ehdokas();
-				f.setId(RS.getInt("ehdokas_id"));
-				f.setEtunimi(RS.getString("etunimi"));
+				Ehdokas f=new Ehdokas();
+				f.setId(RS.getInt("EHDOKAS_ID"));
+				f.setEtunimi(RS.getString("ETUNIMI"));
+				f.setKotipaikkakunta(RS.getString("KOTIPAIKKAKUNTA"));
+				f.setIka(RS.getInt("IKA"));
+				f.setAmmatti(RS.getString("AMMATTI"));
+				f.setKommentti(RS.getString("KOMMENTTI"));
+				list.add(f);
 			}
-			return f;
+			return list;
 		}
 		catch(SQLException e) {
 			return null;

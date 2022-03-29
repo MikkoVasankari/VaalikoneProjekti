@@ -10,26 +10,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Fish application</title>
+<title>Ehdokkaat</title>
 
-<link rel="stylesheet" type="text/css" href="mycssfilesomewhere.css">
+<link rel="stylesheet" type="text/css" href="tyyli.css">
 <script src="myscriptfile.js"></script>
 
 </head>
 <body>
-<h2>Fish application</h2>
+<h2>2022 Meemi vaali ehdokkaat</h2>
 <ol>
-<c:forEach var="Ehdokas" items="${requestScope.fishlist}" >
-<li>${ehdokkaat.ehdokas_id}: ${ehdokkaat.etunimi} <a href='/delete?id=${ehdokkaat.ehdokas_id}'>delete</a> <a href='/readtoupdate?id=${ehdokkaat.ehdokas_id}'>update</a>
-</c:forEach>
+
+
+
 </ol>
 
 <%
-ArrayList<Ehdokas> EhdokkaatList=(ArrayList<Ehdokas>)request.getAttribute("ehdokaslist");
+ArrayList<Ehdokas> EhdokkaatList=(ArrayList<Ehdokas>)request.getAttribute("ehdokkaat");
 
 for (int i=0;EhdokkaatList!=null && i<EhdokkaatList.size();i++){
 	Ehdokas f=EhdokkaatList.get(i);
-	out.println(f.getId()+": "+f.getEtunimi()+"<a href='/delete?id="+f.getId()+"'>delete</a> <a href='/readtoupdate?id="+f.getId()+"'>update</a>");
+	out.println(f.getId()+f.getEtunimi()+f.getKotipaikkakunta()+f.getIka()+f.getAmmatti()+f.getKommentti());
 }
 %>
 
