@@ -1,6 +1,3 @@
-/app/
 /dao/
-/data/
-/UserLoginServlet.class
-/UserDAO.class
-/User.class
+/app/
+/UserProfile.class

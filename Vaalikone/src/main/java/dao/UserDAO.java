@@ -16,7 +16,7 @@ public class UserDAO {
  
     	Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/vaalikone", "root", "root");
-        String sql = "SELECT * FROM userreg WHERE name = ? and pass = ?";
+        String sql = "SELECT * FROM userreg WHERE name=? and pass=?";
         PreparedStatement statement = connection.prepareStatement(sql);
         statement.setString(1, name);
         statement.setString(2, pass);
@@ -27,7 +27,7 @@ public class UserDAO {
  
         if (result.next()) {
             user = new User();
-            user.setName(name);
+            user.setName(result.getString("name"));
             user.setPass(pass);
         }
  

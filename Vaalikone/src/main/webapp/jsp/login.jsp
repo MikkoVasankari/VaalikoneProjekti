@@ -1,24 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-    <div style="text-align: center">
-        <h1>Admin Login</h1>
-        <form action="login" method="post">
-            <label for=name>Name:</label>
-            <input name="name" size="30" />
-            <br><br>
-            <label for="pass">Password:</label>
-            <input type="password" name="pass" size="30" />
-            <br>${message}
-            <br><br>           
-            <button type="submit">Login</button>
-        </form>
-    </div>
+	<h1>Login Here</h1>
+	<form action="UserProfile" method="post">
+		<pre>
+UserName: <input type="text" name="name">
+Password: <input type="password" name="pass">
+    <input type="submit" value="login">
+</pre>
+	</form>
 </body>
 </html>
