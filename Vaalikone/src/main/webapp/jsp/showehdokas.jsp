@@ -2,7 +2,10 @@
     pageEncoding="UTF-8"%>
  
  <%@ page import="java.util.ArrayList" %>   
- <%@ page import="data.Ehdokas" %>   
+ <%@ page import="data.Ehdokas" %> 
+  <%@ page import="data.ehdokasVastaukset" %> 
+  <%@ page import="data.Tulos"%>
+<%@ page import="data.kysymys"%> 
     
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
     
@@ -70,10 +73,29 @@
 			//out.println(f.getId()+f.getEtunimi()+f.getKotipaikkakunta()+f.getIka()+f.getAmmatti()+f.getKommentti());
 		}
 		%>
+	    <h1>HELLO</h1>
+		<%
 	
-
-
-
-
+	ArrayList<ehdokasVastaukset> ehdokasvastauslista = (ArrayList<ehdokasVastaukset>) request.getAttribute("ehdokasvastaukset");
+	for (int i = 0; ehdokasvastauslista != null && i < ehdokasvastauslista.size(); i++) {
+		ehdokasVastaukset t = ehdokasvastauslista.get(i);
+		
+		int id = t.getEhdokas_id();
+		int kysymys = t.getKysymys_id();
+		int vastaus = t.getVastaus();
+		
+		out.println(
+		
+				
+		 "<h5>" +  t.getEhdokas_id() + ". " +  "Kysymysmyksen numero " + t.getKysymys_id() + " Ehdokkaan vastaus " + t.getVastaus()  + "</h5>"   
+		 
+				
+		
+		);
+	
+	}
+	
+	%>
+	<h1>HELLO</h1>
 </body>
 </html>

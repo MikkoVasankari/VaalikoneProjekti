@@ -1,40 +1,58 @@
 @charset "ISO-8859-1";
+
 body {
 	background-color: powderblue;
 	margin: 20px 200px 20px 200px;
 }
-table{
+
+table {
 	border: 1px solid black;
-	width: 100%;
+	width: 50%;
 	background-color: #ffffff;
 }
-td{
-	
-	
+
+td {
 	border-bottom: 1px solid #400040;
 }
 
-th{
-	
+th {
 	border-bottom: 1px solid #400040;
 }
 
-h2{
+h2 {
 	text-align: center;
 }
-h3{
-	text-align: center;
-	
-}
-h4{
-	text-align: center;
-	
-}
-p{
-	
+
+h3 {
 	text-align: center;
 }
-table {
-	border: 1px solid;
-	
+
+h4 {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+
+
+* {
+	box-sizing: border-box;
+}
+/* Create a two-column layout */
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
 }
