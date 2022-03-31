@@ -19,7 +19,7 @@
 </head>
 <body>
 
-	<h2>2022 Meemi vaali ehdokkaat</h2>
+	<h2><u>2022 Meemi vaali ehdokkaat</u></h2>
 	<h4>
 	Vaaliehdokkaat ovat tarkkaan ammattilaisten avulla valittuja yksilöitä,<br>
 	joilla kaikkilla on ainutlaatuinen persoona ja ulkonäkö.<br>
@@ -43,7 +43,7 @@
 			
 			out.println(
 			"<table>" +
-			"<th>" + "<h3>" + f.getId() + ". " + f.getEtunimi() + "</h3>" + "</th>" + 
+			"<th>" + "<h3>" +  f.getId() + ". " + f.getEtunimi()  + "</h3>" + "</th>" + 
 			"</table>" +
 			
 			"<table>" +
