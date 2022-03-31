@@ -16,7 +16,8 @@
 	ArrayList<Tulos> vastauslista = (ArrayList<Tulos>) request.getAttribute("vastaukset");
 	for (int i = 0; vastauslista != null && i < vastauslista.size(); i++) {
 		Tulos t = vastauslista.get(i);
-		out.println(" Kysymys: " + t.getId() + " vastaus: " + t.getVastaus());
+		out.println("Ehdokas. " + t.getEhdokasNum());
+		out.println(" Kysymys: " + t.getId() + " vastaus: " + t.getVastaus1());
 		out.println("<br>");
 	}
 	
