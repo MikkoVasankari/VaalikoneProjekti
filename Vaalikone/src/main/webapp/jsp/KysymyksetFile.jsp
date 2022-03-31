@@ -24,15 +24,9 @@ table {
 <title>Vaalikone kysely</title>
 </head>
 <body>
-	<h1>Vaalikone kysely</h1>
+	<h1> Admin vastaa</h1>
 
-	<h3>
-		Tervetuloa vaalikoneen kysymys osion tässä osiossa sinun olisi
-		tarkoitus vasta kysymyksiin vaihtoehdoilla 1 - 5. <br>(1 = Täysin
-		eri mieltä, 5 = Täysin samaa mieltä)
-	</h3>
-	<form method='post'action='/showTulokset'>
-		<table>
+
 
 			<%
 			ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");

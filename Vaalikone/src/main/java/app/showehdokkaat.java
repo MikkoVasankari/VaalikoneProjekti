@@ -45,7 +45,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	}
 	request.setAttribute("ehdokkaat", list);
 	
-	RequestDispatcher rd=request.getRequestDispatcher("/jsp/showehdokas.jsp"); // lukee jsp tiedoston kansiosta
+	RequestDispatcher rd=request.getRequestDispatcher("jsp/showehdokas.jsp"); // lukee jsp tiedoston kansiosta
 	rd.forward(request, response);
 }
 }
