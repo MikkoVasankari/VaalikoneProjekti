@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\Kari\git\VaalikoneProjekti\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+48045532.index
+4067697860.index
+2314495845.index
+1707654180.index
+2443678207.index
