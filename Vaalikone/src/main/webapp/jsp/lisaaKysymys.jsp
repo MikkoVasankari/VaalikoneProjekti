@@ -13,8 +13,8 @@
 <body>
 <h2>Lisää kysymys</h2>
 <form action='/lisaaKysymys' method='post'>
-Kysymys numero: <input type='text' name='id' value=''><br>
-Kysymys: <input type='text' name='kysymys' value=''><br>
+Kysymys numero: <input type='text' name='id' ><br>
+Kysymys: <input type='text' name='kysymys'><br>
 <input type='submit' name='ok' value='Send'> 
 </form>
 </body>
