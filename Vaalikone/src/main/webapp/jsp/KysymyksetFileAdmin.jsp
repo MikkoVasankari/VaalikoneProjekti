@@ -25,9 +25,11 @@ table {
 </head>
 <body>
 	<h1>Admin vastaa</h1>
-
-
-
+	
+	<a href="jsp/lisaaKysymys.jsp" class="button">Lisää kysymys</a>
+	
+	<br>
+	
 	<%
 		ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");
 
@@ -38,7 +40,9 @@ table {
 			out.println("<br>");
 			out.println(k.getKysymys());
 			out.println("<br>");
-			out.println("<a href='/readtoupdate?id="+k.getId()+"'>update question</a>");
+			out.println("<a href='/readtoupdate?id="+k.getId()+"'>Update question</a>");
+			out.println("<br>");
+			out.println("<a href='/delete?id="+k.getId()+"'>Delete question</a>");
 			out.println("<br>");
 		}
 	%>
@@ -49,7 +53,7 @@ table {
 
 
 
-	<button type="submit" onclick="location.href='index.html'">Palaa
+	<button type="submit" onclick="location.href='welcome.jsp'">Palaa
 		takaisin</button>
 </body>
 </html>
