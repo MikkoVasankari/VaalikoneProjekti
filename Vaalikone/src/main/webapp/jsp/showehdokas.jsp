@@ -45,6 +45,9 @@
 			String kommentti = f.getKommentti();
 			
 			out.println(
+			
+			
+					
 			"<table>" +
 			"<th>" + "<h3>" +  f.getId() + ". " + f.getEtunimi()  + "</h3>" + "</th>" + 
 			"</table>" +
@@ -66,14 +69,42 @@
 			"<th>" + "Kommentti: " + "</th>" + "<td>" + f.getKommentti() + "</td>" +
 			"</tr>" + 
 			
-			"</table>" 
-			);
+			"</table>" +
+			
+			"</div>" + "</div>"			);
 		
 			out.println("<br>" + "<br>" + "<br>" );
 			//out.println(f.getId()+f.getEtunimi()+f.getKotipaikkakunta()+f.getIka()+f.getAmmatti()+f.getKommentti());
+			
 		}
 		%>
-	    <h1>HELLO</h1>
+		
+		<h1> Kysymykset</h1>
+		
+		<%
+		ArrayList<kysymys> KysymysList=(ArrayList<kysymys>)request.getAttribute("kysymykset");
+		
+		for (int i=0;KysymysList!=null && i<KysymysList.size();i++){
+			kysymys k=KysymysList.get(i);
+			
+			int id = k.getId();
+			String kysymys = k.getKysymys();
+			
+		
+			out.println(
+				"<table>"	+
+				"<tr>" + "Kysymys numero: " + k.getId() + " " + k.getKysymys() + "<br>" +
+					
+					
+				"</table>"	
+			);
+		}
+		%>
+		
+		
+	    <h1>Ehdokkaiden vastaukset kysymyksiin</h1>
+	    <h4>(1 = Täysin eri mieltä, 5 = Täysin samaa mieltä) </h4>
+	    
 		<%
 	
 	ArrayList<ehdokasVastaukset> ehdokasvastauslista = (ArrayList<ehdokasVastaukset>) request.getAttribute("ehdokasvastaukset");
@@ -86,9 +117,12 @@
 		
 		out.println(
 		
-				
-		 "<h5>" +  t.getEhdokas_id() + ". " +  "Kysymysmyksen numero " + t.getKysymys_id() + " Ehdokkaan vastaus " + t.getVastaus()  + "</h5>"   
+		
 		 
+		 "<h5>" +"Ehdokas numero. "+ t.getEhdokas_id()  + "  " + 
+		 
+		   "Kysymysmyksen numero: " + t.getKysymys_id() + " Ehdokkaan vastaus on: " + t.getVastaus() + "</h5>"
+		
 				
 		
 		);
