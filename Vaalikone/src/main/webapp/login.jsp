@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Login Here</h1>
-	<form action="Login" method="post">
+	<form action="/Login" method="post">
 	<pre>
 UserName: <input type="text" name="name">
 Password: <input type="password" name="pass">

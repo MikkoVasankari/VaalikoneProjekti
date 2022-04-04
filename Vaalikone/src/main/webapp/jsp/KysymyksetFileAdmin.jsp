@@ -19,7 +19,7 @@ table {
 	margin-right: auto;
 }
 </style>
-
+ 
 
 <title>Vaalikone kysely</title>
 </head>

@@ -54,12 +54,12 @@ table {
 		
 
 		</table>
-		
+		<br>
 		<button type="submit" name="kysymyksetSubmit" id="kysymyksetSubmit"
 			onclick="location.href='/showTulokset'">Siirry
 			tuloksiin</button>
 	</form>
-		
+	<br>
 	
 	<button type="submit" onclick="location.href='index.html'">Palaa
 		takaisin</button>

@@ -104,6 +104,8 @@ public class showTulokset extends HttpServlet {
 //		System.out.println(ehdokasJaSamatVastaukset);
 
 //		L‰hetet‰‰n vastauslista eteenp‰in showTulokset.jsp sivulle		
+		
+		
 		if (request.getParameter("kysymyksetSubmit") != null) {
 			request.setAttribute("vastaukset", ehdokasJaSamatVastaukset);
 			RequestDispatcher rd = request.getRequestDispatcher("jsp/showTulokset.jsp");
