@@ -29,12 +29,17 @@ public class showKysymykset extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		
+		
 		ArrayList<kysymys> lista = null;
 		if (dao.getConnection()) {
 			lista = dao.readAllKysymykset();
 		} else {
 			System.out.println("No connection to database");
 		}
+		
+		
 		
 		request.setAttribute("kysymyslista", lista);
 
