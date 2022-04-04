@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import dao.kyselydao;
 import data.kysymys;
 
-@WebServlet("/showKysymys")
-public class showKysymykset extends HttpServlet {
+@WebServlet("/showKysymysAdmin")
+public class showKysymyksetAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private kyselydao dao = null;
 
@@ -23,15 +23,12 @@ public class showKysymykset extends HttpServlet {
 		dao = new kyselydao("jdbc:mysql://localhost:3306/vaalikone", "root", "root");
 	}
 
-	public showKysymykset() {
-		
+	public showKysymyksetAdmin() {
+		super();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		
-		
 		ArrayList<kysymys> lista = null;
 		if (dao.getConnection()) {
 			lista = dao.readAllKysymykset();
@@ -39,11 +36,9 @@ public class showKysymykset extends HttpServlet {
 			System.out.println("No connection to database");
 		}
 		
-		
-		
 		request.setAttribute("kysymyslista", lista);
 
-		RequestDispatcher rd = request.getRequestDispatcher("/jsp/KysymyksetFile.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/KysymyksetFileAdmin.jsp");
 		rd.forward(request, response);
 	}
 }
