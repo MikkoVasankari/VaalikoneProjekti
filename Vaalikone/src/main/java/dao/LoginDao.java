@@ -12,9 +12,7 @@ public class LoginDao {
 	
 		
 	String sql = "select * from login where name=? and pass=?";
-//	String url = "jdbc:mysql://localhost:3306/vaalikone";
-//	String username = "root";
-//	String password = "root";
+
 	
 	public boolean check(String name, String pass)
 	{
