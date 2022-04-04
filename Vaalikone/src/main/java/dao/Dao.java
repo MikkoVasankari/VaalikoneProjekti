@@ -14,8 +14,6 @@ import dao.Dao;
 import java.sql.Connection;
 
 public class Dao {
-	private static final ArrayList<kysymys> list = null;
-	private static final kysymys f = null;
 	private String url;
 	private String name;
 	private String pass;
@@ -51,9 +49,9 @@ public class Dao {
 			ResultSet RS=stmt.executeQuery("select * from kysymykset");
 			while (RS.next()){
 				kysymys kysymys = new kysymys();
-				f.setId(RS.getInt("kysymys_id"));
-				f.setKysymys(RS.getString("kysymys"));
-				list.add(f);
+				kysymys.setId(RS.getInt("KYSYMYS_ID"));
+				kysymys.setKysymys(RS.getString("KYSYMYS"));
+				list.add(kysymys);
 			}
 			return list;
 		}
@@ -63,7 +61,7 @@ public class Dao {
 	}
 	public ArrayList<kysymys> updateKysymys(kysymys f) {
 		try {
-			String sql="update kysymykset set kysymys=? where kysymys_id=?";
+			String sql="update kysymykset set KYSYMYS=? where KYSYMYS_ID=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, f.getKysymys());
 			pstmt.setInt(2, f.getId());
@@ -74,30 +72,30 @@ public class Dao {
 			return null;
 		}
 	}
-//	public ArrayList<Fish> deleteKysymys(String id) {
-//		try {
-//			String sql="delete from fish where id=?";
-//			PreparedStatement pstmt=conn.prepareStatement(sql);
-//			pstmt.setString(1, id);
-//			pstmt.executeUpdate();
-//			return readAllFish();
-//		}
-//		catch(SQLException e) {
-//			return null;
-//		}
-//	}
-//
+	public ArrayList<kysymys> deleteKysymys(String id) {
+		try {
+			String sql="delete from kysymykset where kysymys_id=?";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.executeUpdate();
+			return readAllKysymys();
+		}
+		catch(SQLException e) {
+			return null;
+		}
+	}
+
 	public kysymys readKysymys(String id) {
 		kysymys f=null;
 		try {
-			String sql="select * from kysymykset where kysymys_id=?";
+			String sql="select * from kysymykset where KYSYMYS_ID=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			ResultSet RS=pstmt.executeQuery();
 			while (RS.next()){
 				f=new kysymys();
-				f.setId(RS.getInt("kysymys_id"));
-				f.setKysymys(RS.getString("kysymys"));
+				f.setId(RS.getInt("KYSYMYS_ID"));
+				f.setKysymys(RS.getString("KYSYMYS"));
 			}
 			return f;
 		}
@@ -105,4 +103,20 @@ public class Dao {
 			return null;
 		}
 	}
+	public ArrayList<kysymys> addKysymys(String id, String kysymys){
+		try {
+//			String sql="insert into kysymykset(kysymys_id,kysymys) where kysymys_id='?' and kysymys='?'";
+			String sql="insert into kysymykset(kysymys_id,kysymys) values ('?', '?')";
+
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, kysymys);
+			pstmt.executeUpdate();
+			return readAllKysymys();
+		}
+		catch(SQLException e) {
+			return null;
+		}
+	}
+	
 }

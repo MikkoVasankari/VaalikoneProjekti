@@ -14,31 +14,25 @@ import dao.Dao;
 import data.kysymys;
 
 @WebServlet(
-    name = "Update",
-    urlPatterns = {"/update"}
+    name = "lisaaKysymys",
+    urlPatterns = {"/lisaaKysymys"}
 )
-public class Update extends HttpServlet {
+public class lisaaKysymys extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 	private Dao dao;
 	public void init() {
 		dao=new Dao("jdbc:mysql://localhost:3306/vaalikone", "root", "root");
 	}
+	
 	@Override
-	public void doGet(HttpServletRequest request, HttpServletResponse response) 
-	     throws IOException {
-		response.sendRedirect("index.html");
-	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response) 
 	     throws IOException, ServletException {
 		String id=request.getParameter("id");
-		String kysymys=request.getParameter("kysymys");
-		
-		kysymys f=new kysymys(id, kysymys);
-		
+		String kysymys = request.getParameter("kysymys");
 		ArrayList<kysymys> lista=null;
 		if (dao.getConnection()) {
-			lista=dao.updateKysymys(f);
+			lista=dao.addKysymys(id, kysymys);
 		}
-		
 		request.setAttribute("kysymyslista", lista);
 		RequestDispatcher rd=request.getRequestDispatcher("/jsp/KysymyksetFileAdmin.jsp");
 		rd.forward(request, response);

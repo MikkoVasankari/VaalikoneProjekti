@@ -14,31 +14,24 @@ import dao.Dao;
 import data.kysymys;
 
 @WebServlet(
-    name = "Update",
-    urlPatterns = {"/update"}
+    name = "Delete",
+    urlPatterns = {"/delete"}
 )
-public class Update extends HttpServlet {
+public class Delete extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 	private Dao dao;
 	public void init() {
 		dao=new Dao("jdbc:mysql://localhost:3306/vaalikone", "root", "root");
 	}
+	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 
-	     throws IOException {
-		response.sendRedirect("index.html");
-	}
-	public void doPost(HttpServletRequest request, HttpServletResponse response) 
 	     throws IOException, ServletException {
 		String id=request.getParameter("id");
-		String kysymys=request.getParameter("kysymys");
-		
-		kysymys f=new kysymys(id, kysymys);
-		
 		ArrayList<kysymys> lista=null;
 		if (dao.getConnection()) {
-			lista=dao.updateKysymys(f);
+			lista=dao.deleteKysymys(id);
 		}
-		
 		request.setAttribute("kysymyslista", lista);
 		RequestDispatcher rd=request.getRequestDispatcher("/jsp/KysymyksetFileAdmin.jsp");
 		rd.forward(request, response);
