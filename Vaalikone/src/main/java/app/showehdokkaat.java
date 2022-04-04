@@ -38,7 +38,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 	ArrayList<Ehdokas> list=null;
 	if (daor.getConnection()) {
 		// JATKA TÄSTÄ JOS EES HUOMAAT TÄN LOL
-		list=daor.readAllEhdokkaat(); // Lassi: tässä ongelmia en tiedä miten päästä eteempäin
+		list=daor.readAllEhdokkaat(); 
 	}
 	else {
 		System.out.println("No connection to database");
