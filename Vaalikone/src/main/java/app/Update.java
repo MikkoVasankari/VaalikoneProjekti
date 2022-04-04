@@ -29,7 +29,7 @@ public class Update extends HttpServlet {
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response) 
 	     throws IOException, ServletException {
-		String id=request.getParameter("kysymys_id");
+		String id=request.getParameter("id");
 		String kysymys=request.getParameter("kysymys");
 		
 		kysymys f=new kysymys(id, kysymys);
@@ -39,8 +39,8 @@ public class Update extends HttpServlet {
 			lista=dao.updateKysymys(f);
 		}
 		
-		request.setAttribute("kysymys", lista);
-		RequestDispatcher rd=request.getRequestDispatcher("/jsp/showKysymysAdmin.jsp");
+		request.setAttribute("kysymyslista", lista);
+		RequestDispatcher rd=request.getRequestDispatcher("/jsp/KysymyksetFileAdmin.jsp");
 		rd.forward(request, response);
 	}
 }

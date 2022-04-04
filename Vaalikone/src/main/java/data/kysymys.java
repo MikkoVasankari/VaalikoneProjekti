@@ -2,9 +2,6 @@ package data;
 
 public class kysymys {
 		private int id;
-		public void setId(int id) {
-			this.id = id;
-		}
 
 		private String kysymys;
 		
@@ -17,6 +14,9 @@ public class kysymys {
 			
 		}
 		
+		public void setId(int id) {
+			this.id = id;
+		}
 		public String getKysymys() {
 			return kysymys;
 		}

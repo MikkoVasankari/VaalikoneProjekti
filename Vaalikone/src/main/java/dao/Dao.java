@@ -51,9 +51,9 @@ public class Dao {
 			ResultSet RS=stmt.executeQuery("select * from kysymykset");
 			while (RS.next()){
 				kysymys kysymys = new kysymys();
-				f.setId(RS.getInt("kysymys_id"));
-				f.setKysymys(RS.getString("kysymys"));
-				list.add(f);
+				kysymys.setId(RS.getInt("KYSYMYS_ID"));
+				kysymys.setKysymys(RS.getString("KYSYMYS"));
+				list.add(kysymys);
 			}
 			return list;
 		}
@@ -63,7 +63,7 @@ public class Dao {
 	}
 	public ArrayList<kysymys> updateKysymys(kysymys f) {
 		try {
-			String sql="update kysymykset set kysymys=? where kysymys_id=?";
+			String sql="update kysymykset set KYSYMYS=? where KYSYMYS_ID=?";
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, f.getKysymys());
 			pstmt.setInt(2, f.getId());
