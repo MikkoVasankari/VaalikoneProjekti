@@ -55,7 +55,7 @@ public class showEvastaus {
 				f.setEhdokas_id(RS.getInt("EHDOKAS_ID"));
 				f.setKysymys_id(RS.getInt("KYSYMYS_ID"));
 				f.setVastaus(RS.getString("VASTAUS"));
-				
+				 
 				list.add(f);
 			}
 			return list;
