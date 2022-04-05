@@ -53,6 +53,7 @@ public class Daor {
 				Ehdokas f=new Ehdokas();
 				f.setId(RS.getInt("EHDOKAS_ID"));
 				f.setEtunimi(RS.getString("ETUNIMI"));
+				f.setEhdokas_num(RS.getString("EHDOKAS_NUM"));
 				f.setKotipaikkakunta(RS.getString("KOTIPAIKKAKUNTA"));
 				f.setIka(RS.getInt("IKA"));
 				f.setAmmatti(RS.getString("AMMATTI"));

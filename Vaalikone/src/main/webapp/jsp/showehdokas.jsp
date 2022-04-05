@@ -49,7 +49,7 @@
 			
 					
 			"<table>" +
-			"<th>" + "<h3>" +  f.getId() + ". " + f.getEtunimi()  + "</h3>" + "</th>" + 
+			"<th>" + "<h3>" +  f.getEhdokas_num() + ". " + f.getEtunimi()  + "</h3>" + "</th>" + 
 			"</table>" +
 			
 			"<table>" +
