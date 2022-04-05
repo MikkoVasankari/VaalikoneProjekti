@@ -114,6 +114,7 @@
 		int id = t.getEhdokas_id();
 		int kysymys = t.getKysymys_id();
 		String vastaus = t.getVastaus();
+
 		
 		out.println(
 		
