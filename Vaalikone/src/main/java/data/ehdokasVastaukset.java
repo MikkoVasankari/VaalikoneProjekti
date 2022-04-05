@@ -4,10 +4,10 @@ public class ehdokasVastaukset {
 	
 		int ehdokas_id;
 		int kysymys_id;
-		int vastaus;
+		String vastaus;
 		
 		
-		public ehdokasVastaukset(int ehdokas_id, int kysymys_id, int vastaus) {
+		public ehdokasVastaukset(int ehdokas_id, int kysymys_id, String vastaus) {
 			this.ehdokas_id = ehdokas_id;
 			this.kysymys_id = kysymys_id;
 			this.vastaus = vastaus;
@@ -29,10 +29,10 @@ public class ehdokasVastaukset {
 		public void setKysymys_id(int kysymys_id) {
 			this.kysymys_id = kysymys_id;
 		}
-		public int getVastaus() {
+		public String getVastaus() {
 			return vastaus;
 		}
-		public void setVastaus(int vastaus) {
+		public void setVastaus(String vastaus) {
 			this.vastaus = vastaus;
 		}
 	

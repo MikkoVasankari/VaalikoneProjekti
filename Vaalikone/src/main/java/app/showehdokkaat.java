@@ -29,7 +29,7 @@ public class showehdokkaat extends HttpServlet {
 	private showEvastaus showEvastaus = null;
 	private kyselydao dao = null;
 
-	// yritetään saada toimimaan käyttämällä opettajan antamaa fish tiedostoa
+	// yritetï¿½ï¿½n saada toimimaan kï¿½yttï¿½mï¿½llï¿½ opettajan antamaa fish tiedostoa
 	@Override
 	public void init() {
 		daor = new Daor("jdbc:mysql://localhost:3306/vaalikone", "root", "root");
@@ -42,11 +42,12 @@ public class showehdokkaat extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		ArrayList<Ehdokas> list = null;
 		if (daor.getConnection()) {
-			// JATKA TÄSTÄ JOS EES HUOMAAT TÄN LOL
+			// JATKA Tï¿½STï¿½ JOS EES HUOMAAT Tï¿½N LOL
 			list = daor.readAllEhdokkaat();
 			request.setAttribute("ehdokkaat", list);
 		} else {
