@@ -13,7 +13,6 @@
 body {
 	text-align: center;
 }
-
 table {
 	margin-left: auto;
 	margin-right: auto;
@@ -50,7 +49,6 @@ table {
 				out.println("<input type='radio' name=" + 'q' + k.getId() + "  value='4'> 4");
 				out.println("<input type='radio' name=" + 'q' + k.getId() + "  value='5'> 5");
 				out.println("<br>");
-
 			}
 			%>
 		
