@@ -74,40 +74,13 @@ public class showTulokset extends HttpServlet {
 
 		}
 
-//		Loopataan kysymyslista ja vertaillaan jokaisen ehdokkaan kohdalla annettuja vastauksia
-//		List‰‰n samat vastaukset listaan
-		for (int j = 0; ehdokasLista != null && j < ehdokasLista.size(); j++) {
-			for (int i = 0; kysymyslista != null && i < kysymyslista.size(); i++) {
-				
-				Ehdokas ehdokas = ehdokasLista.get(j);
-				ehdokasVastaukset ehdokasVastaus = ehdokasVastauksetLista.get(i);
-				Tulos vastausLista = vastauslista.get(i);
-				
-				int ehdokasNum = ehdokas.getId();
-				String ehdokkaanVastaus = ehdokasVastaus.getVastaus();
-				String AnnettuVastaus = vastausLista.getVastaus();
 
-				if (ehdokkaanVastaus.equals(AnnettuVastaus)) {
-					Tulos yhtVastaus = new Tulos(i,ehdokasNum, ehdokkaanVastaus);
-					ehdokasJaSamatVastaukset.add(yhtVastaus);
-				}
-
-			}
-		}
-		
-		
-		
-		for (int j = 0; ehdokasLista != null && j < ehdokasLista.size(); j++) {
-			
-			
-		}
-//		System.out.println(ehdokasJaSamatVastaukset);
 
 //		L‰hetet‰‰n vastauslista eteenp‰in showTulokset.jsp sivulle		
 		
 		
 		if (request.getParameter("kysymyksetSubmit") != null) {
-			request.setAttribute("vastaukset", ehdokasJaSamatVastaukset);
+			request.setAttribute("vastaukset", vastauslista);
 			RequestDispatcher rd = request.getRequestDispatcher("jsp/showTulokset.jsp");
 			rd.forward(request, response);
 		}
