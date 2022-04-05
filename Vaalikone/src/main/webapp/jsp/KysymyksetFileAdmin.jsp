@@ -19,17 +19,20 @@ table {
 	margin-right: auto;
 }
 </style>
+<link rel="stylesheet" href="tyyli.css">
+<link href="css/style.css" rel="stylesheet">
 
-
-<title>Vaalikone kysely</title>
+<title>Admin sivusto</title>
 </head>
 <body>
-	<h1>Admin vastaa</h1>
-	
-	<a href="jsp/lisaaKysymys.jsp" class="button">Lisää kysymys</a>
-	
+	<h1>Muokkaa kysymyksiä</h1>
 	<br>
-	
+	<br>
+	<a href="jsp/lisaaKysymys.jsp" class="button1">Lisää kysymys</a>
+	<br>
+	<br>
+	<br>
+
 	<%
 		ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");
 
@@ -40,9 +43,9 @@ table {
 			out.println("<br>");
 			out.println(k.getKysymys());
 			out.println("<br>");
-			out.println("<a href='/readtoupdate?id="+k.getId()+"'>Update question</a>");
+			out.println("<a href='/readtoupdate?id=" + k.getId() + "'>Update question</a>");
 			out.println("<br>");
-			out.println("<a href='/delete?id="+k.getId()+"'>Delete question</a>");
+			out.println("<a href='/delete?id=" + k.getId() + "'>Delete question</a>");
 			out.println("<br>");
 		}
 	%>
@@ -50,8 +53,6 @@ table {
 
 	<br></br>
 	<br></br>
-
-
 
 	<button type="submit" onclick="location.href='welcome.jsp'">Palaa
 		takaisin</button>

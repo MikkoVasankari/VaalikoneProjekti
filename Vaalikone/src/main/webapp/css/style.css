@@ -1,6 +1,6 @@
 .bg-img {
 	/* The image used */
-	background-image: url("../img/eduskuntatalo.jpg");
+	background-image: url("../img/valtakunnantalo.png");
 	height: 1200px;
 	/* Center and scale the image */
 	background-position: center;
@@ -10,25 +10,41 @@
 	position: relative;
 }
 
-.container1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 140px;
+.button1 {
+	text-decoration: none;
+	font-size: 25px;
+	color: green;
+	padding: 20px 50px;
+	border: 3px solid green;
+	position: relative;
 }
 
-.button {
-	content: none;
-	background-color: rgb(29, 29, 29);
-	border: none;
-	color: red;
-	padding: 20px 28px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 20px;
-	margin: 20px 20px;
-	cursor: pointer;
+.button1::before, .button1::after {
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border: inherit;
+	transition: all 1s;
+	
+}
+
+.button1::before {
+	top: -15px;
+	left: -15px;
+	border-width: 3px 0 0 3px;
+}
+
+.button1::after {
+	bottom: -15px;
+	right: -15px;
+	border-width: 0 3px 3px 0;
+}
+
+.button1:hover::before, .button1:hover::after {
+	width: calc(100% + 27px);
+	height: calc(100% + 27px);
+
 }
 
 /* The navbar */
@@ -53,8 +69,12 @@
 	color: black;
 }
 
-/* Container 2 */
-.container2 {
-	padding-left: 220px;
-	padding-top: 200px;
+.container {
+	
+	font-style: italic;
+
+} 
+
+.wrapper {
+	text-align: center;
 }

@@ -4,9 +4,9 @@
 <head>
 <meta http-equiv="content-type"
 	content="application/xhtml+xml; charset=UTF-8" />
-<title>Hello App Engine</title>
+<title>Vaalikone</title>
 <style>
-.img-container {
+img-container {
 	text-align: center;
 	display: block;
 	object-fit: contain;
@@ -16,51 +16,27 @@
 <link href="css/style.css" rel="stylesheet">
 </head>
 
+<div class="bg-img">
 
-
-	<div class="bg-img">
-		<div class="container">
-		
-			<div class="topnav">
-			<a href='/login.jsp'>Admin</a>
-			
-		</div>
-	
-
-	<div class="container1">
-			<a href="/showKysymys" class="button">VASTAA KYSELYYN</a>
-		</div>
-
-		<div class="container2">
-
-			<h1
-				style="font-size: 55px; font-style: italic; font-family: 'Courier New', Courier, monospace;">
-				ÄÄNESTÄ <br> VUODEN <br> PARAS <br> MEEMI
-			</h1>
-
-		</div>
-
-
-		</div>
+	<div class="topnav">
+		<a href='/login.jsp'>Admin</a>
 	</div>
 
+	<div class="container">
+		<h1>Tervetuloa vaalikoneeseen</h1>
+	
+	<br></br>
 
+	<div class="wrapper">
+		<a href="/showKysymys" class="button1">VASTAA KYSELYYN</a>
+	</div>
+	<br></br>
+	<div class="wrapper">
+		<a href="/sEhdokkaat" class="button1">KATSO EHDOKKAITA</a>
+	</div>
 
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available :</td>        
-      </tr>
-      <tr>
+</div>
 
-
-        <td><a href='/showKysymys'>Kysely</a></td>
-
-
-
-        <td><a href='/sEhdokkaat'>Ehdokkaat</a></td>
-
-      </tr>
-    </table>
-  </body>
-
+</div>
+</body>
 </html>

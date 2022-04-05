@@ -1,6 +1,8 @@
 package dao;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,17 +16,22 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Logout")
 public class Logout extends HttpServlet {
 
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	
-		
+
+		response.getWriter().append("Mee hus").append(request.getContextPath());
+
 		HttpSession session = request.getSession();
-		session.removeAttribute("username");
-		session.invalidate();
-		response.sendRedirect("index.html");
-	
+
+		if (session != null) {
+			session.removeAttribute("name");
+			request.getSession(false).invalidate();
+			session.invalidate();
+			RequestDispatcher dispatcher = request.getRequestDispatcher("index.html");
+			dispatcher.forward(request, response);
+		}
 	}
 
 }
