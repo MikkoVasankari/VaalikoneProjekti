@@ -54,7 +54,7 @@ public class showEvastaus {
 				ehdokasVastaukset f=new ehdokasVastaukset();
 				f.setEhdokas_id(RS.getInt("EHDOKAS_ID"));
 				f.setKysymys_id(RS.getInt("KYSYMYS_ID"));
-				f.setVastaus(RS.getInt("VASTAUS"));
+				f.setVastaus(RS.getString("VASTAUS"));
 				
 				list.add(f);
 			}

@@ -113,7 +113,7 @@
 		
 		int id = t.getEhdokas_id();
 		int kysymys = t.getKysymys_id();
-		int vastaus = t.getVastaus();
+		String vastaus = t.getVastaus();
 		
 		out.println(
 		
