@@ -17,7 +17,6 @@ import data.kysymys;
 import dao.showEvastaus;
 import data.Ehdokas;
 import dao.kyselydao;
-import data.kysymys;
 
 /**
  * Servlet implementation class ShowFish
@@ -54,18 +53,6 @@ public class showehdokkaat extends HttpServlet {
 			System.out.println("No connection to database");
 		}
 
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		ArrayList<Ehdokas> list = null;
-		if (daor.getConnection()) {
-			// JATKA T�ST� JOS EES HUOMAAT T�N LOL
-			list = daor.readAllEhdokkaat();
-			request.setAttribute("ehdokkaat", list);
-		} else {
-			System.out.println("No connection to database");
-		}
-
 		///////////// EHDOKKAAN VASTAUKSET
 		ArrayList<ehdokasVastaukset> list2 = null;
 		if (showEvastaus.getConnection()) {
@@ -86,5 +73,6 @@ public class showehdokkaat extends HttpServlet {
 																							// kansiosta
 			rd.forward(request, response);
 		}
-	}
 	
+	}	
+}
