@@ -44,8 +44,8 @@ public class showTulokset extends HttpServlet {
 		ArrayList<Tulos> vastauslista = new ArrayList<Tulos>();
 		ArrayList<kysymys> kysymyslista = null;
 		ArrayList<ehdokasVastaukset> ehdokasVastauksetLista = null;
-		ArrayList<Tulos> ehdokasJaSamatVastaukset = new ArrayList<Tulos>();
-		ArrayList<Ehdokas> parhaatEhdokkaat = new ArrayList<Ehdokas>();
+		ArrayList<ehdokasVastaukset> ehdokkaanVastaukset = null;
+		ArrayList<Ehdokas> ehdokasJaPisteet = new ArrayList<Ehdokas>();
 
 //		Haetaan tietokannasta kysymykset 
 		if (dao1.getConnection()) {
@@ -59,6 +59,7 @@ public class showTulokset extends HttpServlet {
 		} else {
 			System.out.println("No connection to database");
 		}
+
 		if (dao3.getConnection()) {
 			ehdokasLista = dao3.readAllEhdokkaat();
 		} else {
@@ -67,45 +68,38 @@ public class showTulokset extends HttpServlet {
 
 //		Loopataan kysymyslista ja lis‰t‰‰n vastauksen kysymyksen mukaan vastauslistaan
 		for (int i = 1; kysymyslista != null && i < kysymyslista.size() + 1; i++) {
-
 			String tulos = request.getParameter("q" + i);
 			Tulos t = new Tulos(i, tulos);
 			vastauslista.add(t);
-
 		}
 
-//		Loopataan kysymyslista ja vertaillaan jokaisen ehdokkaan kohdalla annettuja vastauksia
-//		List‰‰n samat vastaukset listaan
-		for (int j = 0; ehdokasLista != null && j < ehdokasLista.size(); j++) {
-			for (int i = 0; kysymyslista != null && i < kysymyslista.size(); i++) {
-				
-				Ehdokas ehdokas = ehdokasLista.get(j);
-				ehdokasVastaukset ehdokasVastaus = ehdokasVastauksetLista.get(i);
-				Tulos vastausLista = vastauslista.get(i);
-				
-				int ehdokasNum = ehdokas.getId();
-				String ehdokkaanVastaus = ehdokasVastaus.getVastaus();
-				String AnnettuVastaus = vastausLista.getVastaus();
-
-				if (ehdokkaanVastaus.equals(AnnettuVastaus)) {
-					Tulos yhtVastaus = new Tulos(i,ehdokasNum, ehdokkaanVastaus);
-					ehdokasJaSamatVastaukset.add(yhtVastaus);
+		
+//		T‰m‰ ottaa kaikkien ehdokkaiden vastaukset ja
+//		laskee pisteet kaikille ehdokkaille
+		
+		int k = 0;
+		while (k < ehdokasVastauksetLista.size()) {
+			int pst = 0;
+			int id = 0;
+			for (int i = 0; vastauslista != null && i < vastauslista.size(); i++) {
+				Tulos t = vastauslista.get(i);
+				ehdokasVastaukset ehdokasVastaus = ehdokasVastauksetLista.get(i + k);
+				if(ehdokasVastaus.getVastaus().equals(t.getVastaus())) {
+					pst ++;
 				}
-
+				id = ehdokasVastaus.getEhdokas_id();
 			}
-		}
-		
-		
-		
-		for (int j = 0; ehdokasLista != null && j < ehdokasLista.size(); j++) {
+			Ehdokas e = new Ehdokas(id,pst);
 			
-			
+			ehdokasJaPisteet.add(e);
+			k += vastauslista.size();
 		}
-//		System.out.println(ehdokasJaSamatVastaukset);
 
-//		L‰hetet‰‰n vastauslista eteenp‰in showTulokset.jsp sivulle		
+//		L‰hetet‰‰n vastauslista eteenp‰in showTulokset.jsp sivulle	
+
 		if (request.getParameter("kysymyksetSubmit") != null) {
-			request.setAttribute("vastaukset", ehdokasJaSamatVastaukset);
+			request.setAttribute("vastaukset", ehdokasJaPisteet);
+			request.setAttribute("ehdokkaat", ehdokasLista);
 			RequestDispatcher rd = request.getRequestDispatcher("jsp/showTulokset.jsp");
 			rd.forward(request, response);
 		}
