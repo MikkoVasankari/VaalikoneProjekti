@@ -10,15 +10,16 @@ import dao.LoginDao;
 public class LoginDao {
 	
 	
-		
 	String sql = "select * from login where name=? and pass=?";
-
+	
+	public LoginDao() {
+		
+	}
+	
 	
 	public boolean check(String name, String pass)
 	{
-	
 		
-				
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/vaalikone", "root", "root");
@@ -35,10 +36,7 @@ public class LoginDao {
 			
 			e.printStackTrace();
 		}
-		
-		
-		
-		
+
 		return false;
 		
 	}

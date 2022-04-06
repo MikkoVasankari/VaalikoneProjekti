@@ -7,6 +7,13 @@ public class Ehdokas {
 	private int ika;
 	private String ammatti;
 	private String kommentti;
+	private int tulos;
+	public int getTulos() {
+		return tulos;
+	}
+	public void setTulos(int tulos) {
+		this.tulos = tulos;
+	}
 	public Ehdokas(String id, String etunimi, String kotipaikkakunta, int ika, String ammatti, String kommentti) {
 		// TODO Auto-generated constructor stub
 		setId(id);
@@ -18,6 +25,10 @@ public class Ehdokas {
 	}
 	public Ehdokas() {
 		// TODO Auto-generated constructor stub
+	}
+	public Ehdokas(int id , int tulos) {
+		this.id = id;
+		this.tulos = tulos;
 	}
 	public int getId() {
 		return id;

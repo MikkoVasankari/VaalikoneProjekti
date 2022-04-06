@@ -1,25 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="data.Tulos"%>
-<%@ page import="data.kysymys"%>
+<%@ page import="data.Ehdokas"%>
 <%@ page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Vastaukset</title>
+<link rel="stylesheet" type="text/css" href="tyyli.css">
+
+<title> Vastaukset </title>
 </head>
 <body>
 
+	<h3>
+		Ehdokas jolla suurimmat pisteet on meidän suosittelema :D 
+	</h3>
+
 	<%
+	ArrayList<Ehdokas> ehdokasJaPisteet = (ArrayList<Ehdokas>) request.getAttribute("vastaukset");
+	ArrayList<Ehdokas> ehdokasLista = (ArrayList<Ehdokas>) request.getAttribute("ehdokkaat");
 	
-	ArrayList<Tulos> vastauslista = (ArrayList<Tulos>) request.getAttribute("vastaukset");
-	for (int i = 0; vastauslista != null && i < vastauslista.size(); i++) {
-		Tulos t = vastauslista.get(i);
-		out.println(" Kysymys: " + t.getId() + " vastaus: " + t.getVastaus());
+	for (int i = 0; ehdokasLista != null && i < ehdokasLista.size(); i++) {
+	
+		Ehdokas vastaus = ehdokasJaPisteet.get(i);
+		Ehdokas e = ehdokasLista.get(i);
+		out.println("Ehdokkaan " + e.getEtunimi() + " " + " Pisteet " + vastaus.getTulos()
+		
+		);
 		out.println("<br>");
-	}
 	
+	}
 	%>
 
 

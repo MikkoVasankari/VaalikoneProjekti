@@ -4,11 +4,18 @@ public class Tulos {
 	
 	int id;
 	String vastaus;
+	int ehdokasNum;
 	
 	public Tulos(int id, String vastaus) {
 		this.id = id;
 		this.vastaus = vastaus;
 	}
+	public Tulos(int id,int ehdokasNum, String ehdokkaanVastaus) {
+		this.ehdokasNum = ehdokasNum;
+		this.id = id;
+		this.vastaus = ehdokkaanVastaus;
+	}
+	
 	public Tulos() {
 		
 	}
@@ -30,4 +37,11 @@ public class Tulos {
 		this.vastaus = vastaus;
 	}
 	
+	public int getEhdokasNum() {
+		return ehdokasNum;
+	}
+	public void setEhdokasNum(int ehdokasNum) {
+		this.ehdokasNum = ehdokasNum;
+	}
+
 }

@@ -105,8 +105,8 @@ public class Dao {
 	}
 	public ArrayList<kysymys> addKysymys(String id, String kysymys){
 		try {
-//			String sql="insert into kysymykset(kysymys_id,kysymys) where kysymys_id='?' and kysymys='?'";
-			String sql="insert into kysymykset(kysymys_id,kysymys) values ('?', '?')";
+			
+			String sql="INSERT INTO kysymykset VALUES(?, ?)";;
 
 			PreparedStatement pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, id);

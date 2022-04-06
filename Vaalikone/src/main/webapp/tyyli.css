@@ -5,23 +5,18 @@ body {
 	margin: 20px 200px 20px 200px;
 }
 
+
 table {
 	border: 1px solid black;
-	width: 100%;
 	background-color: #ffffff;
+	width: 100%;
 }
 
-td {
 	border-bottom: 1px solid #400040;
 }
 
 th {
 	border-bottom: 1px solid #400040;
-}
-
-h1 {
-	text-align: center;
-	margin-top: 100px;
 }
 
 h2 {
@@ -42,12 +37,8 @@ p {
 
 table {
 	border: 1px solid;
+	
 }
-
-.wrapper1 {
-	text-align: center;
-}
-
 .button1 {
 	text-decoration: none;
 	font-size: 25px;
@@ -82,4 +73,15 @@ table {
 	width: calc(100% + 27px);
 	height: calc(100% + 27px);
 }
+
+
+
+
+* {
+	box-sizing: border-box;
+}
+/* Create a two-column layout */
+
+
+
 
