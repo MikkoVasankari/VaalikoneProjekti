@@ -11,10 +11,9 @@
 <title>Admin sivusto</title>
 </head>
 <link rel="stylesheet" href="tyyli.css">
-<link href="css/style.css" rel="stylesheet">
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper1">
 		<%
 			response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //HTTP 1.1
 			response.setHeader("Pragma", "no-cache"); //HTTP 1.0

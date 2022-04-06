@@ -13,7 +13,7 @@
 .button1 {
 	text-decoration: none;
 	font-size: 25px;
-	color: green;
+	color: black;
 	padding: 20px 50px;
 	border: 3px solid green;
 	position: relative;
@@ -26,7 +26,6 @@
 	height: 40px;
 	border: inherit;
 	transition: all 1s;
-	
 }
 
 .button1::before {
@@ -44,7 +43,6 @@
 .button1:hover::before, .button1:hover::after {
 	width: calc(100% + 27px);
 	height: calc(100% + 27px);
-
 }
 
 /* The navbar */
@@ -65,16 +63,21 @@
 }
 
 .topnav a:hover {
-	background-color: #ddd;
+	background-color: lightblue;
 	color: black;
 }
 
 .container {
-	
+	font-size: 15px;
 	font-style: italic;
-
-} 
+	text-align: center;
+	height: 200px;
+	margin: 20px;
+}
 
 .wrapper {
 	text-align: center;
+	display: inline-block;
+	width: calc(50% - 20px);
+	margin-top: 90px;
 }

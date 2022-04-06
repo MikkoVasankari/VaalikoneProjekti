@@ -9,6 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Lisää kysymys</title>
+<link rel="stylesheet" type="text/css" href="tyyli.css">
 </head>
 <body>
 <h2>Lisää kysymys</h2>
