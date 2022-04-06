@@ -72,6 +72,7 @@ body {
 
 
 			<br>
+			<br>
 			<button class='button1' type="submit" name="kysymyksetSubmit"
 				id="kysymyksetSubmit" onclick="location.href='/showTulokset'">Siirry
 				tuloksiin</button>
