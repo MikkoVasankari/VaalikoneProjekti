@@ -19,9 +19,7 @@ import data.Ehdokas;
 import dao.kyselydao;
 import data.kysymys;
 
-/**
- * Servlet implementation class ShowFish
- */
+
 @WebServlet("/sEhdokkaat")
 public class showehdokkaat extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -29,7 +27,7 @@ public class showehdokkaat extends HttpServlet {
 	private showEvastaus showEvastaus = null;
 	private kyselydao dao = null;
 
-	// yritet��n saada toimimaan k�ytt�m�ll� opettajan antamaa fish tiedostoa
+	
 	@Override
 	public void init() {
 		daor = new Daor("jdbc:mysql://localhost:3306/vaalikone", "root", "root");
