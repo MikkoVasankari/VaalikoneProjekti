@@ -11,18 +11,18 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-
-
-	Welcome ${username}
-
-
-
-
 <link rel="stylesheet" href="tyyli.css">
 <link href="css/style.css" rel="stylesheet">
-
 <body>
+
+
+	Welcome ${name}
+
+
+
+
+
+
 	<div class="wrapper1">
 		<%
 			response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //HTTP 1.1
@@ -33,14 +33,14 @@
 				response.sendRedirect("login.jsp");
 			}
 			%>
-
+	</div>
 
 
 
 	<br></br>
 	<br></br>
 	
-	<a href='/showKysymysAdmin'>Muokkaa kyselyitä --- Tämä on tällä hetkellä toimiva</a>
+	<a href='/showKysymysAdmin' class='button1'>Muokkaa kyselyitä </a> 
 	
 	<br></br>
 	<br></br>
