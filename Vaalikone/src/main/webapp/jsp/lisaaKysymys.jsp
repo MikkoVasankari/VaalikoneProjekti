@@ -7,7 +7,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="tyyli.css">
 <meta charset="UTF-8">
 <title>Lisää kysymys</title>
 </head>
