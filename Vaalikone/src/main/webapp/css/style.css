@@ -1,6 +1,6 @@
 .bg-img {
 	/* The image used */
-	background-image: url("../img/valtakunnantalo.png");
+	background-image: url("../img/eduskuntatalo.jpg");
 	height: 1200px;
 	/* Center and scale the image */
 	background-position: center;
@@ -72,6 +72,13 @@
 	background-color: #ddd;
 	color: black;
 }
+
+
+/* Container 2 */
+.container2 {
+	padding-left: 220px;
+	padding-top: 200px;
+	
 
 .container {
 	font-size: 15px;
