@@ -70,6 +70,7 @@ body {
 				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='4'> 4 </div>");
 				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='5'> 5 </div>");
 				out.println("<br>");
+				out.println("<br>");
 			}
 			%>
 

@@ -26,7 +26,7 @@ table {
 }
 
 </style>
-<title>Vastaukset</title>
+<title>Tulokset</title>
 </head>
 <body>
 	<h3>Ehdokas suurimmilla pisteillä on meidän suosittelema</h3>
