@@ -23,12 +23,13 @@ table {
 
 <title>Vaalikone kysely</title>
 </head>
+<link rel="stylesheet" href="tyyli.css">
 <body>
-	<h1>Admin vastaa</h1>
-	
-	<a href="jsp/lisaaKysymys.jsp" class="button">Lisää kysymys</a>
-	
+	<h1>Admin sivusto</h1>
 	<br>
+	<a href="jsp/lisaaKysymys.jsp" class="button1">Lisää kysymys</a>
+	
+	<br><br>
 	
 	<%
 		ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");
