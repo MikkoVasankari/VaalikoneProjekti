@@ -2,7 +2,7 @@
 
 body {
 	background-color: powderblue;
-	margin: 20px 200px 20px 200px;
+	margin: 20px 150px 20px 150px;
 }
 
 .float-container {
@@ -44,10 +44,7 @@ body {
 }
 
 
-table{
-	width: 50%;
-	border: red;
-}
+
 
 <!--
 td {
@@ -71,6 +68,14 @@ h3 {
 }
 
 h4 {
+	text-align: center;
+}
+h5 {
+	text-align: center;
+	border-color: red;
+	border-bottom: 5px;
+}
+h7 {
 	text-align: center;
 }
 
