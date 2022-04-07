@@ -28,7 +28,7 @@ body {
 		<form action='update' method='post'>
 			Kysymys id: <input type='text' name='id' size='2'
 				value='${requestScope.kysymys.id}' readonly><br>
-			Kysymys: <input type='text' name='kysymys' size='75'
+			Kysymys: <input type='text' name='kysymys' size='70'
 				value='${requestScope.kysymys.kysymys}'><br>
 				 <input type='submit' name='ok' value='Send'>
 		</form>

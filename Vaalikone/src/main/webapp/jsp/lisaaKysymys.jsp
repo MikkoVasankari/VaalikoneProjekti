@@ -28,7 +28,7 @@ body {
 		<h2>Lisää kysymys</h2>
 		<form action='/lisaaKysymys' method='post'>
 			Kysymys numero: <input type='text' name='id' size='2'><br>
-			Kysymys: <input type='text' name='kysymys' size='75'><br> <input
+			Kysymys: <input type='text' name='kysymys' size='70'><br> <input
 				type='submit' name='ok' value='Send'>
 		</form>
 
