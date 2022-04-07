@@ -9,8 +9,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Kysymysten editointi</title>
-<link rel="stylesheet" type="text/css" href="tyyli.css">
 </head>
+<link rel="stylesheet" href="tyyli.css">
 <body>
 <h2>Edit Kysymykset</h2>
 <form action='update' method='post'>

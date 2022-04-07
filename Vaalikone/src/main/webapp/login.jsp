@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+<link rel="stylesheet" href="tyyli.css">
 <body>
 
 
@@ -18,9 +19,9 @@ Password: <input type="password" name="pass">
 <br>
     <input type="submit" value="login"> <input type="button"
 					value="back" onclick="history.go(-1)">
-   
-
-	</pre>
+   </pre>
+	</div>
+	
 	</form>
 </body>
 </html>
