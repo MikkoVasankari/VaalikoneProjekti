@@ -9,7 +9,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Kysymysten editointi</title>
-<link rel="stylesheet" type="text/css" href="tyyli.css">
 </head>
 <body>
 <h2>Edit Kysymykset</h2>
