@@ -18,27 +18,19 @@
 
 
 
-	<%
-		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //HTTP 1.1
-		response.setHeader("Pragma", "no-cache"); //HTTP 1.0
-		response.setHeader("Expires", "0"); //Proxies
 
-		if (session.getAttribute("username") == null) {
-			response.sendRedirect("login.jsp");
-		}
-	%>
-	<h3>ADMIN SÄÄTÄÄ TÄÄLLÄ</h3>
+<link rel="stylesheet" href="tyyli.css">
+<link href="css/style.css" rel="stylesheet">
 
-<%
-			ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");
-			
-			
-			for (int i = 0; kysymyslista != null && i < kysymyslista.size(); i++) {
-				kysymys k = kysymyslista.get(i);
-				out.println(" Kysymys." + k.getId());
-				out.println("<br>");
-				out.println(k.getKysymys());
+<body>
+	<div class="wrapper">
+		<%
+			response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //HTTP 1.1
+			response.setHeader("Pragma", "no-cache"); //HTTP 1.0
+			response.setHeader("Expires", "0"); //Proxies
 
+			if (session.getAttribute("name") == null) {
+				response.sendRedirect("login.jsp");
 			}
 			%>
 
