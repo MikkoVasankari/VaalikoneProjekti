@@ -40,7 +40,6 @@ public class ehdokasVastaukset {
 			this.vastaus = vastaus;
 		}
 		
-		
 
 		public String getKommentti() {
 			return kommentti;

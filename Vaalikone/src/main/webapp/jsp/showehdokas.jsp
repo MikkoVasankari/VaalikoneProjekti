@@ -64,7 +64,7 @@ table {
 
 </head>
 <body>
-
+<a href="/index.html" class="button1">Takaisin</a>
 	<header>
 		<h2>2022 Meemi vaali ehdokkaat</h2>
 	</header>
@@ -74,7 +74,7 @@ table {
 		Tällä sivulla voit katsoa ehdokkaiden tietoja.
 
 	</h4>
-
+	
 	<h4>Kysymykset</h4>
 
 	<%
@@ -107,7 +107,7 @@ table {
 				String ammatti = f.getAmmatti();
 				String kommentti = f.getKommentti();
 
-				out.println("<br>" + "<br>" + "<br>" + "<br>" + "<br>" + 
+				out.println("<br>" + "<br>" + "<br>" +
 
 						"<table>" + "<th>" + "<h2>" + f.getEhdokas_num() + ". " + f.getEtunimi() + "</h2>" + "</th>"
 						+ "</table>" +
