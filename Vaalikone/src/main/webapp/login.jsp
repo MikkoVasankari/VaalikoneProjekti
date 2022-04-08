@@ -7,11 +7,7 @@
 <title>Insert title here</title>
 </head>
 <link rel="stylesheet" href="tyyli.css">
-<style>
-body{
-	text-align: center;
-}
-</style>
+
 <body>
 
 
