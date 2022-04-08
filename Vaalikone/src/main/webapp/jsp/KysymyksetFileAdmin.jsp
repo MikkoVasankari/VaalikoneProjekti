@@ -24,8 +24,9 @@ table {
 <title>Vaalikone kysely</title>
 </head>
 <link rel="stylesheet" href="tyyli.css">
+<link href="css/style.css" rel="stylesheet">
 <body>
-	<h1>Admin sivusto</h1>
+	<h1>Muokkaa kysymyksiä</h1>
 	<br>
 	<a href="jsp/lisaaKysymys.jsp" class="button1">Lisää kysymys</a>
 

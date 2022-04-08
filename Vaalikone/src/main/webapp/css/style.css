@@ -16,6 +16,7 @@
 	align-items: center;
 	height: 140px;
 }
+
 .button1 {
 	text-decoration: none;
 	font-size: 25px;
@@ -23,8 +24,6 @@
 	padding: 10px 25px;
 	border: 3px solid green;
 	position: relative;
-	margin-left: 10px;
-	margit-right: 10px;
 }
 
 .button1::before, .button1::after {
@@ -75,23 +74,17 @@
 	color: black;
 }
 
-
 /* Container 2 */
 .container2 {
 	padding-left: 220px;
-	padding-top: 200px;
-	
-
-.container {
-	font-size: 15px;
+	padding-top: 200px; . container { font-size : 15px;
 	font-style: italic;
 	text-align: center;
-
 }
 
 .wrapper {
 	text-align: center;
 	display: inline-block;
 	width: calc(50% - 20px);
-	margin-top: 90px; 
+	margin-top: 90px;
 }
