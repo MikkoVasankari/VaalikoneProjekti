@@ -9,10 +9,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
+<link rel="stylesheet" type="text/css" href="tyyli.css">
 <style>
 body {
 	text-align: center;
-	background-color: rgb(255, 255, 255);
+	font-size: 18px;
 }
 
 .radio {
@@ -34,9 +36,11 @@ body {
 .b {
 	background-color: powderblue;;
 }
-</style>
 
-<link rel="stylesheet" type="text/css" href="tyyli.css">
+.button1 {
+	padding: 10px 25px;
+}
+</style>
 
 <title>Vaalikone kysely</title>
 </head>
@@ -53,28 +57,24 @@ body {
 
 
 
-			<
-				ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");
+			<%
+			ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");
 
-				for (int i = 0; kysymyslista != null && i < kysymyslista.size(); i++) {
-					kysymys k = kysymyslista.get(i);
-					out.println(" Kysymys." + k.getId());
-					out.println("<br>");
-					out.println(k.getKysymys());
-					out.println("<br>");
-					out.println(
-							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='1'> 1 </div>");
-					out.println(
-							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='2'> 2 </div>");
-					out.println(
-							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='3'> 3 </div>");
-					out.println(
-							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='4'> 4 </div>");
-					out.println(
-							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='5'> 5 </div>");
-					out.println("<br>");
-				}
-				%>
+			for (int i = 0; kysymyslista != null && i < kysymyslista.size(); i++) {
+				kysymys k = kysymyslista.get(i);
+				out.println(" Kysymys." + k.getId());
+				out.println("<br>");
+				out.println(k.getKysymys());
+				out.println("<br>");
+				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='1'> 1 </div>");
+				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='2'> 2 </div>");
+				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='3'> 3 </div>");
+				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='4'> 4 </div>");
+				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='5'> 5 </div>");
+				out.println("<br>");
+				out.println("<br>");
+			}
+			%>
 
 
 			<br> <br>
