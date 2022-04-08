@@ -15,7 +15,7 @@
 	response.setHeader("Expires", "0");	//Proxies
 	
 	
-		if (session.getAttribute("username") == null) {
+		if (session.getAttribute("name") == null) {
 			response.sendRedirect("login.jsp");
 		}
 	%>
