@@ -30,6 +30,7 @@ table {
 </head>
 <body>
 	<h3>Ehdokas suurimmilla pisteillä on meidän suosittelema</h3>
+	<h5>Ehdokas sai aina pisteen kun vastasit saman mielipiteen hänen kanssa.</h5>
 	<table>
 		<tr>
 			<td>Ehdokas</td>
