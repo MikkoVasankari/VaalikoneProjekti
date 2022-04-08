@@ -33,13 +33,14 @@ article {
 
 .container {
 	width: 50%;
-	border: 1px solid black;
+	border: none;
 	float: left;
+	
 }
 
 .container2 {
 	width: 50%;
-	border: 1px solid black;
+	border: none;
 	float: right;
 }
 
@@ -58,14 +59,16 @@ footer {
 table {
 	width: 100%;
 	border: red;
+	background-color: powderblue;
 }
+
 </style>
 
 
 </head>
 <body>
 
-
+<br>
 <a href="/index.html" class="button1">Takaisin</a>
 	<header>
 		<h2>2022 Meemi vaali ehdokkaat</h2>
@@ -78,7 +81,7 @@ table {
 
 	</h4>
 	
-	<h4>Kysymykset</h4>
+	<h3>Kysymykset</h3>
 
 	<%
 		ArrayList<kysymys> KysymysList = (ArrayList<kysymys>) request.getAttribute("kysymykset");
@@ -89,7 +92,7 @@ table {
 			int id = k.getId();
 			String kysymys = k.getKysymys();
 
-			out.println("<h7>" + k.getId() + " " + k.getKysymys() + "</h7>");
+			out.println("<h7>" + k.getId() + ". " + k.getKysymys() + "</h7>");
 		}
 	%>
 	<h4>Ehdokkaiden vastaukset kysymyksiin</h4>

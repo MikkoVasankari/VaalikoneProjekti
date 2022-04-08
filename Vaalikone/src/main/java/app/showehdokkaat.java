@@ -18,8 +18,6 @@ import dao.showEvastaus;
 import data.Ehdokas;
 import dao.kyselydao;
 
-import data.kysymys;
-
 @WebServlet("/sEhdokkaat")
 public class showehdokkaat extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -56,7 +54,9 @@ public class showehdokkaat extends HttpServlet {
 			list2 = showEvastaus.readAllVastaukset();
 			request.setAttribute("ehdokasvastaukset", list2);
 
-		
+		} else {
+			System.out.println("No connection to database");
+		}
 		///////////// KYSYMYKSET
 		ArrayList<kysymys> list3 = null;
 		if (dao.getConnection()) {
@@ -65,11 +65,9 @@ public class showehdokkaat extends HttpServlet {
 		} else {
 			System.out.println("No connection to database");
 		}
-		
-			RequestDispatcher rd = request.getRequestDispatcher("/jsp/showehdokas.jsp"); // lukee jsp tiedoston
-																							// kansiosta
-			rd.forward(request, response);
-		}
-	
-	}	
+
+		RequestDispatcher rd = request.getRequestDispatcher("/jsp/showehdokas.jsp"); // lukee jsp tiedoston
+																						// kansiosta
+		rd.forward(request, response);
+	}
 }
