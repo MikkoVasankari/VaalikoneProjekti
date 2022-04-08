@@ -25,7 +25,8 @@ body {
 
 .radio input[type="radio"] {
 	position: absolute;
-	right: 17%; margin : 0;
+	right: 17%;
+	margin: 0;
 	bottom: 0;
 	margin: 0;
 }
@@ -52,27 +53,31 @@ body {
 
 
 
-			<%
-			ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");
+			<
+				ArrayList<kysymys> kysymyslista = (ArrayList<kysymys>) request.getAttribute("kysymyslista");
 
-			for (int i = 0; kysymyslista != null && i < kysymyslista.size(); i++) {
-				kysymys k = kysymyslista.get(i);
-				out.println(" Kysymys." + k.getId());
-				out.println("<br>");
-				out.println(k.getKysymys());
-				out.println("<br>");
-				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='1'> 1 </div>");
-				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='2'> 2 </div>");
-				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='3'> 3 </div>");
-				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='4'> 4 </div>");
-				out.println("<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='5'> 5 </div>");
-				out.println("<br>");
-			}
-			%>
+				for (int i = 0; kysymyslista != null && i < kysymyslista.size(); i++) {
+					kysymys k = kysymyslista.get(i);
+					out.println(" Kysymys." + k.getId());
+					out.println("<br>");
+					out.println(k.getKysymys());
+					out.println("<br>");
+					out.println(
+							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='1'> 1 </div>");
+					out.println(
+							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='2'> 2 </div>");
+					out.println(
+							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='3'> 3 </div>");
+					out.println(
+							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='4'> 4 </div>");
+					out.println(
+							"<div class='radio'> <input type='radio' name=" + 'q' + k.getId() + "  value='5'> 5 </div>");
+					out.println("<br>");
+				}
+				%>
 
 
-			<br>
-			<br>
+			<br> <br>
 			<button class='button1' type="submit" name="kysymyksetSubmit"
 				id="kysymyksetSubmit" onclick="location.href='/showTulokset'">Siirry
 				tuloksiin</button>
