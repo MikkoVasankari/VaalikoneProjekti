@@ -27,7 +27,8 @@ body {
 
 .radio input[type="radio"] {
 	position: absolute;
-	right: 17%; margin : 0;
+	right: 17%;
+	margin: 0;
 	bottom: 0;
 	margin: 0;
 }
@@ -35,6 +36,7 @@ body {
 .b {
 	background-color: powderblue;;
 }
+
 .button1 {
 	padding: 10px 25px;
 }
@@ -75,8 +77,7 @@ body {
 			%>
 
 
-			<br>
-			<br>
+			<br> <br>
 			<button class='button1' type="submit" name="kysymyksetSubmit"
 				id="kysymyksetSubmit" onclick="location.href='/showTulokset'">Siirry
 				tuloksiin</button>

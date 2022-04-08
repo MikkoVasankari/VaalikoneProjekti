@@ -49,6 +49,7 @@ public class ehdokasVastauksetDAO {
 				eV.setEhdokas_id(RS.getInt("EHDOKAS_ID"));
 				eV.setKysymys_id(RS.getInt("KYSYMYS_ID"));
 				eV.setVastaus(RS.getString("VASTAUS"));
+			
 				lista.add(eV);
 			}
 			return lista;
