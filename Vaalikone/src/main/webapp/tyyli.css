@@ -2,7 +2,7 @@
 
 body {
 	background-color: powderblue;
-	margin: 20px 200px 20px 200px;
+	margin: 20px 150px 20px 150px;
 }
 
 
@@ -12,8 +12,6 @@ table {
 	width: 100%;
 }
 
-	border-bottom: 1px solid #400040;
-}
 
 th {
 	border-bottom: 1px solid #400040;
@@ -35,10 +33,12 @@ p {
 	text-align: center;
 }
 
+
 table {
 	border: 1px solid;
 	
 }
+
 
 .button1 {
 	text-decoration: none;
@@ -78,7 +78,18 @@ table {
 * {
 	box-sizing: border-box;
 }
+
 /* Create a two-column layout */
+
+h5 {
+	text-align: center;
+	border-color: red;
+	border-bottom: 5px;
+}
+h7 {
+	text-align: center;
+}
+
 
 .wrapper1 {
 	text-align: center;

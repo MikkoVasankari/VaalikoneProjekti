@@ -12,6 +12,7 @@
 	text-align: center;
 	background-color: powderblue;
 }
+
 body {
 	background-color: powderblue;
 }
@@ -29,10 +30,10 @@ body {
 			Kysymys id: <input type='text' name='id' size='2'
 				value='${requestScope.kysymys.id}' readonly><br>
 			Kysymys: <input type='text' name='kysymys' size='70'
-				value='${requestScope.kysymys.kysymys}'><br>
-				 <input type='submit' name='ok' value='Send'>
+				value='${requestScope.kysymys.kysymys}'><br> <input
+				type='submit' name='ok' value='Send'>
 		</form>
 	</div>
-	
+
 </body>
 </html>

@@ -57,6 +57,7 @@ public class Daor {
 				f.setIka(RS.getInt("IKA"));
 				f.setAmmatti(RS.getString("AMMATTI"));
 				f.setKommentti(RS.getString("KOMMENTTI"));
+				f.setEhdokas_num(RS.getString("EHDOKAS_NUM"));
 				list.add(f);
 			}
 			return list;
