@@ -157,7 +157,7 @@ table {
 
 						"<h5>" + " " + "Ehdokas numero. " + t.getEhdokas_num() + " " +
 
-								"Kysymysmyksen numero: " + t.getKysymys_id() + " Ehdokkaan vastaus on: "
+								"Kysymyksen numero: " + t.getKysymys_id() + " Ehdokkaan vastaus on: "
 								+ t.getVastaus() + "</h5>"
 
 				);
